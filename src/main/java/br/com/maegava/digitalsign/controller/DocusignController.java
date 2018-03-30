@@ -10,13 +10,18 @@ import br.com.maegava.digitalsign.service.DocusignService;
 
 @CrossOrigin(origins="*")
 @RestController
-@RequestMapping(path = "/api/docusign/", produces="application/json")
+@RequestMapping(path = "/api/docusign", produces="application/json")
 public class DocusignController {
 	
 	@Autowired DocusignService docusignSvn;
 	
-	@RequestMapping(path = "", method = RequestMethod.POST)
-	public void assignDocument() {
-		docusignSvn.sendDocument();
+	@RequestMapping(path = "/", method = RequestMethod.POST)
+	public boolean assignDocument() {
+		return docusignSvn.sendDocument();
+	}
+	
+	@RequestMapping(path = "/redirect", method = RequestMethod.POST)
+	public void receiveAssginedDocument() {
+		//docusignSvn.sendDocument();
 	}
 }
