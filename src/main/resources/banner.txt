@@ -5,5 +5,5 @@
 \__,_/   /_/    \__, /  /_/   \__/  \__,_/  /_/   /____/  /_/    \__, /  /_/ /_/ 
                /____/                                           /____/           
 
-	Example Application to sign documents with Docusign API. 
+	Example Application to sign documents with Docusign Rest API. 
 	Author: Guilherme Maegava.
